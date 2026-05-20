@@ -5,6 +5,7 @@ public class Customer : MonoBehaviour
 {
     [SerializeField]
     private float speed = 1f;  //客の速さ
+    [SerializeField] private float _leaveSpeed = 2f;  //客が去る速さ
     public int HaveScore { get { return _haveScore; } }
     [SerializeField] private int _haveScore = 10;
     public bool iscorected = false;
@@ -22,7 +23,7 @@ public class Customer : MonoBehaviour
         {
             Transform myTransform = this.transform;  //ワールド座標を基準に、座標を取得
             Vector2 pos = myTransform.position;
-            pos.x += speed;  //速さ
+            pos.x += _leaveSpeed;  //速さ
             myTransform.position = pos;
         }
     }

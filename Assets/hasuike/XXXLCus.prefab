@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -5834735766416941322}
   - component: {fileID: -5579288825053732149}
   - component: {fileID: -8217918135762155195}
-  - component: {fileID: -3575177765492840849}
+  - component: {fileID: 2662159802133549558}
   m_Layer: 0
   m_Name: XXXLCus
   m_TagString: Untagged
@@ -175,7 +175,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41936790ab232c649afa962070bc47c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &-3575177765492840849
+--- !u!114 &2662159802133549558
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -184,8 +184,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 4804496802313157395}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 091c5e0e0c34643409e046d7af26b991, type: 3}
+  m_Script: {fileID: 11500000, guid: 64713fad94cf0774692daa7a858a7f98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
-  IsMove: 0
+  speed: 5
+  _leaveSpeed: -0.1
+  _haveScore: 50
+  iscorected: 0
