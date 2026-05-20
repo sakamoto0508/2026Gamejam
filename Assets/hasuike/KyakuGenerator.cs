@@ -17,9 +17,4 @@ public class KyakuGenerator : MonoBehaviour
             CustomerGenerator(rand);
         }
     }
-
-    private void Update()
-    {
-        
-    }
 }
