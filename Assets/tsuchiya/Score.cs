@@ -16,10 +16,6 @@ public class Score : MonoBehaviour
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        text.text = "00000";
-    }
     // Update is called once per frame
     void Update()
     {
