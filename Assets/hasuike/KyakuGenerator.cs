@@ -7,19 +7,11 @@ public class KyakuGenerator : MonoBehaviour
 {
     public List<GameObject> Customers = new List<GameObject>();
     bool once = false;
-    public void CustomerGenerator(int number)
+    public void CustomerGenerator()
     {
-        Instantiate(Customers[number]);
+        int rand = Random.Range(0, Customers.Count);
+        Instantiate(Customers[rand]);
     }
-    private void Start()
-    {
-        for (int i = 0; i < 3; i++)
-        {
-            int rand = Random.Range(0, Customers.Count);
-            CustomerGenerator(rand);
-        }
-    }
-    
     private void Update()
     {
         if (once == false)//IsFever == true &&
