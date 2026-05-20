@@ -83,6 +83,26 @@ public class AudioManager : MonoBehaviour
         }
     }
 
+    public void PlayBGm(string name)
+    {
+        if (_bgmDictionary.TryGetValue(name, out AudioClip clip))
+        {
+            // 同じBGMなら再生し直さない
+            if (_bgmSource.clip == clip && _bgmSource.isPlaying)
+            {
+                return;
+            }
+            _bgmSource.clip = clip;
+            _bgmSource.volume = 1f;
+            _bgmSource.loop = true;
+            _bgmSource.Play();
+        }
+        else
+        {
+            Debug.LogWarning($"BGMが見つかりません : {name}");
+        }
+    }
+
     /// <summary>
     /// BGM停止
     /// </summary>
@@ -101,6 +121,18 @@ public class AudioManager : MonoBehaviour
         if (_seDictionary.TryGetValue(name, out AudioClip clip))
         {
             _seSource.PlayOneShot(clip, volume);
+        }
+        else
+        {
+            Debug.LogWarning($"SEが見つかりません : {name}");
+        }
+    }
+
+    public void PlaySE(string name)
+    {
+        if (_seDictionary.TryGetValue(name, out AudioClip clip))
+        {
+            _seSource.PlayOneShot(clip, 1f);
         }
         else
         {
