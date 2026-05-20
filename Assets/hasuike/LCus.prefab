@@ -177,6 +177,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+  _leaveSpeed: -0.1
   _haveScore: 10
   iscorected: 0
 --- !u!114 &3758107256852291507
