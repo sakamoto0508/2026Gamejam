@@ -14,19 +14,21 @@ public class GameManager : MonoBehaviour
     bool flg = false;
 
     public List<GameObject> OriginObjects;
-    [SerializeField]private Timer _timer; 
+    [SerializeField] private Timer _timer;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         StartCoroutine(SpawnLoop());
+        int rnd = Random.Range(0, OriginObjects.Count);
+        Instantiate(OriginObjects[rnd], transform.position, transform.rotation);
     }
 
     IEnumerator SpawnLoop()
     {
-        while (isSpawning && _timer.IsFever== false)
+        while (isSpawning && isFever == false)
         {
             yield return new WaitForSeconds(spawninterval);
-            int rnd = Random.Range(0,3);
+            int rnd = Random.Range(0, 3);
             Instantiate(OriginObjects[rnd], transform.position, transform.rotation);
             //一時停止して待機→再始動
         }
@@ -36,7 +38,7 @@ public class GameManager : MonoBehaviour
         if (_timer.IsFever && flg == false)
         {
             StartCoroutine(FeverLoop());
-        
+
             flg = true;
         }
     }

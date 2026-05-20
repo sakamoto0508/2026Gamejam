@@ -5,9 +5,11 @@ public class Customer : MonoBehaviour
 {
     [SerializeField]
     private float speed = 1f;  //客の速さ
+    public int HaveScore { get { return _haveScore; } }
+    [SerializeField] private int _haveScore = 10;
     public bool iscorected = false;
     private Vector2 targetposition;
-    
+
 
     // Update is called once per frame
     void Update()//客と服があったかどうかブール値を決める　あっていたら服と同じただ左に行く。

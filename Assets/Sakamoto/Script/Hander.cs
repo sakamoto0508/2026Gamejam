@@ -1,12 +1,13 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class NewMonoBehaviourScript : MonoBehaviour, IPointerDownHandler, IDragHandler, IPointerUpHandler
+public class Hander : MonoBehaviour, IPointerDownHandler, IDragHandler, IPointerUpHandler
 {
     public bool IsPointerUp { get; private set; } = false;
     public bool IsPointerDown { get; private set; } = false;
     private Camera _camera;
     private Vector2 _offset;
+    [SerializeField] private MainCharacter _mainCharacter;
 
     private void Start()
     {
@@ -21,6 +22,8 @@ public class NewMonoBehaviourScript : MonoBehaviour, IPointerDownHandler, IDragH
         Debug.Log("Pointer Down");
         Vector2 worldPosition = GetMouseWorldPosition(eventData);
         _offset = (Vector2)transform.position - worldPosition;
+        if (_mainCharacter != null)
+            _mainCharacter.IsMove = false;
     }
     void IDragHandler.OnDrag(PointerEventData eventData)
     {
@@ -33,6 +36,8 @@ public class NewMonoBehaviourScript : MonoBehaviour, IPointerDownHandler, IDragH
         IsPointerUp = true;
         IsPointerDown = false;
         Debug.Log("Pointer Up");
+        if (_mainCharacter != null)
+            _mainCharacter.IsMove = true;
         //後で、シャツと客の合っているかどうかを客側でやる。
     }
 
