@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 8923857513729820471}
   - component: {fileID: 4774981405049741536}
   - component: {fileID: -1631344103114885876}
+  - component: {fileID: 3010873389414011174}
   m_Layer: 0
   m_Name: S
   m_TagString: DeleteArea
@@ -145,6 +146,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: -0.01
+  IsMove: 1
 --- !u!60 &4774981405049741536
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -415,3 +417,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a0db3d6fa46b2f4c95d5870053ff212, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &3010873389414011174
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1146970159948856705}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17f164ad95612d944b4d07a81c7d190b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _mainCharacter: {fileID: 8923857513729820471}
