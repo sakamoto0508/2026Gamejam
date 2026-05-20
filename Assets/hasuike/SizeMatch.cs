@@ -3,7 +3,7 @@ using Unity.Jobs.LowLevel.Unsafe;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class GetComponentClothesSize : MonoBehaviour
+public class SizeMatch : MonoBehaviour
 {
     private ClothesSize ClothesSize;
 
