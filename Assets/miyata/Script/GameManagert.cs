@@ -19,13 +19,11 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         StartCoroutine(SpawnLoop());
-        int rnd = Random.Range(0, OriginObjects.Count);
-        Instantiate(OriginObjects[rnd]);
     }
 
     IEnumerator SpawnLoop()
     {
-        while (isSpawning && isFever == false)
+        while (isSpawning && _timer.IsFever== false)
         {
             yield return new WaitForSeconds(spawninterval);
             int rnd = Random.Range(0,3);
