@@ -12,8 +12,9 @@ GameObject:
   - component: {fileID: 8360177397912669432}
   - component: {fileID: -2845447036288987982}
   - component: {fileID: -7363804318551201734}
+  - component: {fileID: 6425318751929403898}
   m_Layer: 0
-  m_Name: parka-lightgreen_0
+  m_Name: XXXL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -86,7 +87,7 @@ SpriteRenderer:
   m_Size: {x: 8.28, y: 8.4}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!60 &-2845447036288987982
@@ -329,3 +330,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentsize: 3
+--- !u!114 &6425318751929403898
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1932217973748865694}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 091c5e0e0c34643409e046d7af26b991, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: -0.01

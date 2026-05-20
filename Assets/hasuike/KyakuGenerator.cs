@@ -7,9 +7,11 @@ public class KyakuGenerator : MonoBehaviour
 {
     public List<GameObject> Customers = new List<GameObject>();
     bool once = false;
+    [SerializeField]private GameObject _rikishi;
     public void CustomerGenerator()
     {
         int rand = Random.Range(0, Customers.Count);
+        if(Customers.Count == 0) return;
         Instantiate(Customers[rand]);
     }
     private void Update()
@@ -17,6 +19,7 @@ public class KyakuGenerator : MonoBehaviour
         if (once == false)//IsFever == true &&
         {
             Customers.Clear();
+            Customers.Add(_rikishi);
             once = true;
         } 
     }
