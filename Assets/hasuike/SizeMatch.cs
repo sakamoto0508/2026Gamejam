@@ -26,6 +26,7 @@ public class SizeMatch : MonoBehaviour
                 if (hander.IsPointerUp == true && !isMatched)
                 {
                     Destroy(collision.gameObject);
+                    Debug.Log($"Destroyed {collision.gameObject.name}");
                     if (ClothesSize.CurrentSize == component.CurrentSize)
                     {
                         Debug.Log("成功");
@@ -44,6 +45,7 @@ public class SizeMatch : MonoBehaviour
             _kyakuGenerator.NewGenerate(this.transform.position);
         }
         _customer.iscorected = true;
+        Debug.Log($"Customer {_customer.name} corrected: {_customer.iscorected}");
         // ここで、スコアを加算する処理を呼び出す
         if (_score != null)
         {
