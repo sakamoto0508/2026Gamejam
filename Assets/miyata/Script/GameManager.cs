@@ -13,8 +13,7 @@ public class GameManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        StartCoroutine(SpawnLoop()); 
-
+        StartCoroutine(SpawnLoop());
         int rnd = Random.Range(0,OriginObjects.Count);
         Instantiate(OriginObjects[rnd]);
     }
@@ -23,10 +22,11 @@ public class GameManager : MonoBehaviour
     {
         while(isSpawning)
         {
+            yield return new WaitForSeconds(spawninterval);
             int rnd = Random.Range(0,OriginObjects.Count);
             Instantiate(OriginObjects[rnd],transform.position,transform.rotation);
             //一時停止して待機→再始動
-            yield return new WaitForSeconds(spawninterval);
+            
         }
     }
 
