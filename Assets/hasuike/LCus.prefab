@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: -8561472570589033528}
   - component: {fileID: 164725433886203051}
   - component: {fileID: 3758107256852291507}
+  - component: {fileID: 2786557593195865070}
   m_Layer: 0
   m_Name: LCus
   m_TagString: Untagged
@@ -190,3 +191,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41936790ab232c649afa962070bc47c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2786557593195865070
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4804496802313157395}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 091c5e0e0c34643409e046d7af26b991, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1
+  IsMove: 0

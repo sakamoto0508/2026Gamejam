@@ -9,6 +9,12 @@ public class Score : MonoBehaviour
     private int _amount = 10;
     [SerializeField]
     private int fever = 100;
+
+    private void Start()
+    {
+        text.text = GameScore.ToString();
+    }
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
     // Update is called once per frame

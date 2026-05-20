@@ -6,12 +6,14 @@ public class SizeMatch : MonoBehaviour
     private ClothesSize ClothesSize;
     private Customer _customer;
     private KyakuGenerator _kyakuGenerator;
+    private Score _score;
 
     private void Start()
     {
         ClothesSize = GetComponent<ClothesSize>();
         _customer = GetComponent<Customer>();
         _kyakuGenerator = FindObjectOfType<KyakuGenerator>();
+        _score = FindObjectOfType<Score>();
     }
 
     private void OnTriggerStay2D(Collider2D collision)
@@ -43,5 +45,9 @@ public class SizeMatch : MonoBehaviour
         }
         _customer.iscorected = true;
         // ここで、スコアを加算する処理を呼び出す
+        if (_score != null)
+        {
+            _score.ScoreUpdate(_customer.HaveScore);
+        }
     }
 }
