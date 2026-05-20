@@ -25,7 +25,7 @@ public class GameManager : MonoBehaviour
 
     IEnumerator SpawnLoop()
     {
-        while (isSpawning && isFever == false)
+        while (isSpawning && !_timer.IsFever)
         {
             yield return new WaitForSeconds(spawninterval);
             int rnd = Random.Range(0, 3);
