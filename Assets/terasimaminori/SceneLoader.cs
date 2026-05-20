@@ -10,7 +10,17 @@ public class Scene : MonoBehaviour
 
     public void SceneChange()
     {
+        _loadScene = "Game";
         SceneManager.LoadScene(_loadScene);
     }
-
+    public void TitleChange()
+    {
+        _loadScene = "Title";
+        SceneManager.LoadScene(_loadScene);
+    }
+    public void ReslutChange()
+    {
+        _loadScene = "Reslut";
+        SceneManager.LoadScene(_loadScene);
+    }
 }
