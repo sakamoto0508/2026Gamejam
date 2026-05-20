@@ -13,9 +13,10 @@ GameObject:
   - component: {fileID: 3825098995354676955}
   - component: {fileID: -4947124922954749942}
   - component: {fileID: 7737649335398260568}
+  - component: {fileID: -8113060007038552667}
   m_Layer: 0
   m_Name: L
-  m_TagString: DeleteArea
+  m_TagString: Clothes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -274,4 +275,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 091c5e0e0c34643409e046d7af26b991, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: -0.01
+  speed: -0.1
+--- !u!114 &-8113060007038552667
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4951626500984437833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17f164ad95612d944b4d07a81c7d190b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

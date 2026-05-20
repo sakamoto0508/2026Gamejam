@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class NewMonoBehaviourScript : MonoBehaviour, IPointerDownHandler, IDragHandler, IPointerUpHandler
+public class Hander : MonoBehaviour, IPointerDownHandler, IDragHandler, IPointerUpHandler
 {
     public bool IsPointerUp { get; private set; } = false;
     public bool IsPointerDown { get; private set; } = false;
