@@ -546,10 +546,7 @@ MonoBehaviour:
   - {fileID: 4804496802313157395, guid: 38f9fec1b45463c4ca85848b7c64f3e9, type: 3}
   - {fileID: 3429216082991577035, guid: 1a8b10c77dddccf4bbdccc52ac0d7864, type: 3}
   - {fileID: 4804496802313157395, guid: 77c87e6eb63ee644bac0b9887ee6d24e, type: 3}
-  _generatePoint:
-  - {fileID: 107271699}
-  - {fileID: 1620363612}
-  - {fileID: 1071874522}
+  _generatePoint: []
   _rikishi: {fileID: 4804496802313157395, guid: 3eec023bc2bfc554f975116a21a14d16, type: 3}
   _timer: {fileID: 1291454029}
 --- !u!4 &1146473729
@@ -600,7 +597,7 @@ MonoBehaviour:
   feverspawninterval: 1
   isSpawning: 1
   OriginObjects:
-  - {fileID: 1146970159948856705, guid: 083537464409d174f89932c61937d013, type: 3}
+  - {fileID: 1341272077576887102, guid: 9406cf44cc383b84491e8de175a0517e, type: 3}
   - {fileID: 1341272077576887102, guid: 314e367610e5f01419500809c111b3ce, type: 3}
   - {fileID: 4951626500984437833, guid: ad0250ad3cd1c0c44a22c3ef8c69774e, type: 3}
   - {fileID: 1932217973748865694, guid: bc93d293851093c4bbd8cce722d9190a, type: 3}
