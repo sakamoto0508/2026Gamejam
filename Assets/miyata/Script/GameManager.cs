@@ -15,8 +15,8 @@ public class GameManager : MonoBehaviour
     {
         StartCoroutine(SpawnLoop()); 
 
-        int rnd = Random.Range(0, 4);
-        Instantiate(OriginObjects[rnd], new Vector3(-1.0f, 3.0f, 0.0f), Quaternion.identity);
+        int rnd = Random.Range(0,OriginObjects.Count);
+        Instantiate(OriginObjects[rnd]);
     }
 
     IEnumerator SpawnLoop()
