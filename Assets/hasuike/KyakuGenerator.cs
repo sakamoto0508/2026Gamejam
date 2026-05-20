@@ -1,25 +1,26 @@
 using System.Collections.Generic;
+using System.Threading;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class KyakuGenerator : MonoBehaviour
 {
     public List<GameObject> Customers = new List<GameObject>();
-
-    public void CustomerGenerator(int number)
+    bool once = false;
+    [SerializeField]private GameObject _rikishi;
+    public void CustomerGenerator()
     {
-        Instantiate(Customers[number]);
+        int rand = Random.Range(0, Customers.Count);
+        if(Customers.Count == 0) return;
+        Instantiate(Customers[rand]);
     }
-    private void Start()
-    {
-        for (int i = 0; i < 3; i++)
-        {
-            int rand = Random.Range(0, Customers.Count);
-            CustomerGenerator(rand);
-        }
-    }
-
     private void Update()
     {
-        
+        if (once == false)//IsFever == true &&
+        {
+            Customers.Clear();
+            Customers.Add(_rikishi);
+            once = true;
+        } 
     }
 }
