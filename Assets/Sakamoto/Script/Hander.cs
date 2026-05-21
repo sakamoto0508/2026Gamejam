@@ -19,7 +19,6 @@ public class Hander : MonoBehaviour, IPointerDownHandler, IDragHandler, IPointer
     {
         IsPointerDown = true;
         IsPointerUp = false;
-        Debug.Log("Pointer Down");
         Vector2 worldPosition = GetMouseWorldPosition(eventData);
         _offset = (Vector2)transform.position - worldPosition;
         AudioManager.Instance.PlaySE("Grab");
@@ -36,7 +35,6 @@ public class Hander : MonoBehaviour, IPointerDownHandler, IDragHandler, IPointer
     {
         IsPointerUp = true;
         IsPointerDown = false;
-        Debug.Log("Pointer Up");
         if (_mainCharacter != null)
             _mainCharacter.IsMove = true;
         //後で、シャツと客の合っているかどうかを客側でやる。
