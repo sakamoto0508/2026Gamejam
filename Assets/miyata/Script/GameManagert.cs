@@ -28,7 +28,7 @@ public class GameManager : MonoBehaviour
         while (isSpawning && !_timer.IsFever)
         {
             yield return new WaitForSeconds(spawninterval);
-            int rnd = Random.Range(0, 3);
+            int rnd = Random.Range(0, OriginObjects.Count);
             Instantiate(OriginObjects[rnd], transform.position, transform.rotation);
             //一時停止して待機→再始動
         }
