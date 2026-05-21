@@ -13,12 +13,11 @@ public class ResultView : MonoBehaviour
         {
             if (i < data.Count)
             {
-                texts[i].text =
-                    $"{i + 1}位  {data[i].score}点";
+                texts[i].text =$"{i + 1}位  {data[i].score}点";
             }
             else
             {
-                texts[i].text = "---";
+                texts[i].text = "    ---";
             }
         }
     }
