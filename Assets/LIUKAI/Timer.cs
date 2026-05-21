@@ -33,6 +33,6 @@ public class Timer : MonoBehaviour
     }
     void GameOver()
     {
-        _sceneLoader.ReslutChange();
+        _sceneLoader.ResultChange();
     }
 }

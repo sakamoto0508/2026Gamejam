@@ -983,6 +983,10 @@ PrefabInstance:
       propertyPath: text
       value: 
       objectReference: {fileID: 7659185549862499227}
+    - target: {fileID: 539818136050141635, guid: 3d7ca485299ac704d859b79a0c57c6a6, type: 3}
+      propertyPath: _sceneLoader
+      value: 
+      objectReference: {fileID: 437245948}
     - target: {fileID: 595942948235007689, guid: 3d7ca485299ac704d859b79a0c57c6a6, type: 3}
       propertyPath: m_LocalPosition.x
       value: 505.8853
@@ -1392,8 +1396,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 760.71, y: 465.7}
-  m_SizeDelta: {x: 400, y: 60}
+  m_AnchoredPosition: {x: 760.71, y: 440.4}
+  m_SizeDelta: {x: 403.41, y: 194}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &7659185549862499227
 MonoBehaviour:
@@ -1417,7 +1421,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 40
+    m_FontSize: 73
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 0
