@@ -10,6 +10,7 @@ public class KyakuGenerator : MonoBehaviour
     [SerializeField] private GameObject _rikishi;
     [SerializeField] private Timer _timer;
 
+
     private void Start()
     {
         for (int i = 0; i < 3; i++)
@@ -36,6 +37,15 @@ public class KyakuGenerator : MonoBehaviour
             Customers.Clear();
             Customers.Add(_rikishi);
             once = true;
+            Customer[] customers = FindObjectsOfType<Customer>();
+            foreach (Customer customer in customers)
+            {
+                customer.iscorected = true;
+            }
+            for (int i = 0; i < 3; i++)
+            {
+                NewGenerate(_generatePoint[i].position);
+            }
         }
     }
 }
