@@ -429,6 +429,7 @@ MonoBehaviour:
   - {fileID: 1071874522}
   _rikishi: {fileID: 4804496802313157395, guid: 3eec023bc2bfc554f975116a21a14d16, type: 3}
   _timer: {fileID: 1291454029}
+  _gameObject: {fileID: 4938095755617958529, guid: 2e79f16be10fbd14f8d5ef191f8db4aa, type: 3}
 --- !u!4 &1146473729
 Transform:
   m_ObjectHideFlags: 0

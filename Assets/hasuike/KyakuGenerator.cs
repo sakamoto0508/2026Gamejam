@@ -9,6 +9,7 @@ public class KyakuGenerator : MonoBehaviour
     bool once = false;
     [SerializeField] private GameObject _rikishi;
     [SerializeField] private Timer _timer;
+    [SerializeField] private GameObject _gameObject;
 
     private void Start()
     {
@@ -26,6 +27,7 @@ public class KyakuGenerator : MonoBehaviour
         {
             customer.Targetvecter(position);
             sizeMatch.targetPos = position;
+            sizeMatch.EffectPrefab =_gameObject;    
         }
     }
 

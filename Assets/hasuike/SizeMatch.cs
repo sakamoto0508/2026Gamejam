@@ -9,6 +9,7 @@ public class SizeMatch : MonoBehaviour
     private Score _score;
     public Vector2 targetPos;
 
+    public GameObject EffectPrefab;
     private void Start()
     {
         ClothesSize = GetComponent<ClothesSize>();
@@ -23,16 +24,18 @@ public class SizeMatch : MonoBehaviour
         {
             if (collision.TryGetComponent<ClothesSize>(out var component) && collision.TryGetComponent<Hander>(out var hander))
             {
-                Debug.Log("取得");
                 if (hander.IsPointerUp == true && !isMatched)
                 {
                     Destroy(collision.gameObject);
-                    Debug.Log($"Destroyed {collision.gameObject.name}");
                     if (ClothesSize.CurrentSize == component.CurrentSize)
                     {
-                        Debug.Log("成功");
                         isMatched = true;
                         Match();
+                        if (EffectPrefab != null)
+                        {
+                            var effect = Instantiate(EffectPrefab, transform.position, Quaternion.identity);
+                            DestroyEffect(effect);
+                        }
                     }
                 }
             }
@@ -46,11 +49,19 @@ public class SizeMatch : MonoBehaviour
             _kyakuGenerator.NewGenerate(targetPos);
         }
         _customer.iscorected = true;
-        Debug.Log($"Customer {_customer.name} corrected: {_customer.iscorected}");
-        // ここで、スコアを加算する処理を呼び出す
+        //ﾅ、XRAZ髀案び出
         if (_score != null)
         {
             _score.ScoreUpdate(_customer.HaveScore);
+        }
+    }
+
+    private async void DestroyEffect(GameObject effect)
+    {
+        await System.Threading.Tasks.Task.Delay(System.TimeSpan.FromSeconds(1));
+        if (effect != null)
+        {
+            Destroy(effect);
         }
     }
 }
