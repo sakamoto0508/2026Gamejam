@@ -15,8 +15,8 @@ GameObject:
   - component: {fileID: 5666815049909500411}
   - component: {fileID: -5650482691405190391}
   - component: {fileID: -3366784537610136856}
-  - component: {fileID: 4018477936160150125}
   - component: {fileID: -1654411153057240713}
+  - component: {fileID: 5632940994862706962}
   m_Layer: 0
   m_Name: L
   m_TagString: Clothes
@@ -34,7 +34,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.65, y: 0.65, z: 0.57677287}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 0.62114006}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
@@ -83,12 +83,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 3854930585927517216, guid: 67c2784f4ad8cff4f99dfc8424c80999, type: 3}
+  m_Sprite: {fileID: 711383328264861382, guid: bc5a61ddd878b134dbc4e4f304e3a4b9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 3.41, y: 4.84}
+  m_Size: {x: 3.81, y: 3.19}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -159,8 +159,8 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.41, y: 4.84}
-    newSize: {x: 3.41, y: 4.84}
+    oldSize: {x: 3.81, y: 3.19}
+    newSize: {x: 3.81, y: 3.19}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -261,8 +261,35 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _mainCharacter: {fileID: 7737649335398260568}
---- !u!61 &4018477936160150125
-BoxCollider2D:
+--- !u!50 &-1654411153057240713
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4951626500984437833}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!60 &5632940994862706962
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -299,38 +326,80 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.41, y: 4.84}
-    newSize: {x: 3.41, y: 4.84}
+    oldSize: {x: 3.81, y: 3.19}
+    newSize: {x: 3.81, y: 3.19}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 3.2, y: 4.6}
-  m_EdgeRadius: 0
---- !u!50 &-1654411153057240713
-Rigidbody2D:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4951626500984437833}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.39499998, y: -1.5849999}
+      - {x: 0.475, y: -1.5949999}
+      - {x: 0.585, y: -1.5849999}
+      - {x: 0.79499996, y: -1.5849999}
+      - {x: 1.025, y: -1.5749999}
+      - {x: 1.0649999, y: -1.545}
+      - {x: 1.105, y: -1.485}
+      - {x: 1.105, y: -1.015}
+      - {x: 1.095, y: -0.815}
+      - {x: 1.095, y: -0.66499996}
+      - {x: 1.0849999, y: -0.525}
+      - {x: 1.0749999, y: -0.295}
+      - {x: 1.0649999, y: -0.13499999}
+      - {x: 1.055, y: 0.085}
+      - {x: 1.0649999, y: 0.145}
+      - {x: 1.425, y: 0.044999998}
+      - {x: 1.525, y: -0.005}
+      - {x: 1.615, y: 0.024999999}
+      - {x: 1.665, y: 0.125}
+      - {x: 1.8149999, y: 0.515}
+      - {x: 1.875, y: 0.675}
+      - {x: 1.895, y: 0.745}
+      - {x: 1.895, y: 0.84499997}
+      - {x: 1.8449999, y: 0.91499996}
+      - {x: 1.795, y: 0.935}
+      - {x: 1.5849999, y: 1.0649999}
+      - {x: 1.265, y: 1.225}
+      - {x: 0.995, y: 1.345}
+      - {x: 0.775, y: 1.4449999}
+      - {x: 0.655, y: 1.505}
+      - {x: 0.565, y: 1.515}
+      - {x: 0.42499998, y: 1.5849999}
+      - {x: -0.42499998, y: 1.5849999}
+      - {x: -0.53499997, y: 1.545}
+      - {x: -0.675, y: 1.495}
+      - {x: -0.865, y: 1.405}
+      - {x: -1.0649999, y: 1.3149999}
+      - {x: -1.115, y: 1.295}
+      - {x: -1.2049999, y: 1.255}
+      - {x: -1.7049999, y: 1.005}
+      - {x: -1.8449999, y: 0.91499996}
+      - {x: -1.895, y: 0.85499996}
+      - {x: -1.905, y: 0.815}
+      - {x: -1.905, y: 0.73499995}
+      - {x: -1.885, y: 0.66499996}
+      - {x: -1.8449999, y: 0.555}
+      - {x: -1.755, y: 0.315}
+      - {x: -1.7049999, y: 0.205}
+      - {x: -1.665, y: 0.074999996}
+      - {x: -1.5949999, y: 0.005}
+      - {x: -1.435, y: 0.035}
+      - {x: -1.095, y: 0.145}
+      - {x: -1.0649999, y: 0.114999995}
+      - {x: -1.0749999, y: 0.005}
+      - {x: -1.095, y: -0.235}
+      - {x: -1.095, y: -0.525}
+      - {x: -1.115, y: -0.585}
+      - {x: -1.115, y: -0.705}
+      - {x: -1.105, y: -0.965}
+      - {x: -1.125, y: -0.965}
+      - {x: -1.125, y: -1.275}
+      - {x: -1.105, y: -1.4449999}
+      - {x: -1.105, y: -1.525}
+      - {x: -1.025, y: -1.5849999}
+      - {x: -0.815, y: -1.5849999}
+      - {x: -0.475, y: -1.5949999}
+      - {x: -0.39499998, y: -1.5949999}
+      - {x: -0.355, y: -1.5849999}
+  m_UseDelaunayMesh: 0
