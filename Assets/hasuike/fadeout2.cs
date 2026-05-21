@@ -33,15 +33,13 @@ public class fadeout2 : MonoBehaviour
     }
     private IEnumerator FadeOutCoroutine()
     {
-        if (isFading == true)
+
+        color.a += 0.5f;
+        gameObject.GetComponent<Image>().color = color;
+        yield return null;
+        if (color.a >= 1)
         {
-            color.a += 0.5f;
-            gameObject.GetComponent<Image>().color = color;
-            yield return null;
-            if (color.a >= 1)
-            {
-                isFading = false;
-            }
+            isFading = false;
         }
-     }
+    }
 }

@@ -131,6 +131,7 @@ GameObject:
   - component: {fileID: 474749}
   - component: {fileID: 474748}
   - component: {fileID: 474747}
+  - component: {fileID: 474750}
   m_Layer: 5
   m_Name: Button (Legacy)
   m_TagString: Untagged
@@ -202,6 +203,30 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 243957152}
+        m_TargetAssemblyTypeName: FadeOut, Assembly-CSharp
+        m_MethodName: StartFadeOut
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 474750}
+        m_TargetAssemblyTypeName: FadeOut, Assembly-CSharp
+        m_MethodName: StartFadeOut
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 577530780}
         m_TargetAssemblyTypeName: Scene, Assembly-CSharp
         m_MethodName: SceneChange
@@ -252,6 +277,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 474745}
   m_CullTransparentMesh: 1
+--- !u!114 &474750
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 474745}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e14c6ba7b2b5077428ab64eae668a4b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  image: {fileID: 474748}
+  fadeDuration: 1
 --- !u!1 &243957147
 GameObject:
   m_ObjectHideFlags: 0
@@ -263,14 +302,14 @@ GameObject:
   - component: {fileID: 243957148}
   - component: {fileID: 243957150}
   - component: {fileID: 243957149}
-  - component: {fileID: 243957151}
+  - component: {fileID: 243957152}
   m_Layer: 5
   m_Name: Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &243957148
 RectTransform:
   m_ObjectHideFlags: 0
@@ -303,7 +342,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -328,7 +367,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 243957147}
   m_CullTransparentMesh: 1
---- !u!114 &243957151
+--- !u!114 &243957152
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -337,12 +376,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 243957147}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2bbe08de58583a046b1a6e953c990b93, type: 3}
+  m_Script: {fileID: 11500000, guid: 6016f825adfff874a93ba2f79916d26f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Image: {fileID: 0}
+  Image: {fileID: 243957149}
   fadeDuration: 1
-  Button: {fileID: 0}
 --- !u!1001 &257488055
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -596,7 +634,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _loadScene: 
-  _loadTime: 0.2
+  _loadTime: 1
 --- !u!4 &577530781
 Transform:
   m_ObjectHideFlags: 0
@@ -707,8 +745,8 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 392334644}
-  - {fileID: 474746}
   - {fileID: 243957148}
+  - {fileID: 474746}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
