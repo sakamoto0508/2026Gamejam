@@ -8,6 +8,7 @@ public class Timer : MonoBehaviour
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     [SerializeField]float timer = 30f;
+    [SerializeField]Scene _sceneLoader;
     bool gameOver;
     public bool IsFever = false;
     void Start()
@@ -32,6 +33,6 @@ public class Timer : MonoBehaviour
     }
     void GameOver()
     {
-        Debug.Log("TimeOver");
+        _sceneLoader.ReslutChange();
     }
 }
