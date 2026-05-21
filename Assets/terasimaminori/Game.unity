@@ -422,6 +422,7 @@ MonoBehaviour:
   - {fileID: 4804496802313157395, guid: 38f9fec1b45463c4ca85848b7c64f3e9, type: 3}
   - {fileID: 3429216082991577035, guid: 1a8b10c77dddccf4bbdccc52ac0d7864, type: 3}
   - {fileID: 4804496802313157395, guid: 77c87e6eb63ee644bac0b9887ee6d24e, type: 3}
+  - {fileID: 4804496802313157395, guid: 3eec023bc2bfc554f975116a21a14d16, type: 3}
   _generatePoint:
   - {fileID: 107271699}
   - {fileID: 1620363612}
@@ -1331,7 +1332,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 1415424974096824062, guid: fbabdf4efd7a96a47bc2773bb3d9c1e2, type: 3}
+  m_Sprite: {fileID: -8974348791488435913, guid: 1b66bf8d1e50a8e4aa52b3a79a9859be, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
