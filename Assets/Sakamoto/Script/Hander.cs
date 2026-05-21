@@ -22,6 +22,7 @@ public class Hander : MonoBehaviour, IPointerDownHandler, IDragHandler, IPointer
         Debug.Log("Pointer Down");
         Vector2 worldPosition = GetMouseWorldPosition(eventData);
         _offset = (Vector2)transform.position - worldPosition;
+        AudioManager.Instance.PlaySE("Grab");
         if (_mainCharacter != null)
             _mainCharacter.IsMove = false;
     }

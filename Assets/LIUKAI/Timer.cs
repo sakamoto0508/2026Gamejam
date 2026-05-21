@@ -15,6 +15,8 @@ public class Timer : MonoBehaviour
 
     [SerializeField] private Scene _sceneLoader;
 
+    private Score _score;
+
     private bool gameOver;
 
     public bool IsFever = false;
@@ -27,6 +29,9 @@ public class Timer : MonoBehaviour
 
         // 最初の色を保存
         defaultColor = text.color;
+
+        // Scoreコンポーネントを取得
+        _score = FindObjectOfType<Score>();
     }
 
     void Update()
@@ -45,7 +50,7 @@ public class Timer : MonoBehaviour
         {
             float t = Mathf.PingPong(Time.time * blinkSpeed, 1f);
 
-            // 白 ⇔ 赤 を往復
+            // 白 赤 を往復
             text.color = Color.Lerp(defaultColor, Color.red, t);
         }
         else
@@ -62,6 +67,11 @@ public class Timer : MonoBehaviour
 
     void GameOver()
     {
+        if (_score != null)
+        {
+            RankingManager.AddScore(_score.GameScore);
+        }
+
         _sceneLoader.ResultChange();
     }
 }

@@ -37,6 +37,10 @@ public class SizeMatch : MonoBehaviour
                             DestroyEffect(effect);
                         }
                     }
+                    else
+                    {
+                        AudioManager.Instance.PlaySE("Miss");
+                    }
                 }
             }
         }
@@ -44,6 +48,7 @@ public class SizeMatch : MonoBehaviour
 
     private void Match()
     {
+        AudioManager.Instance.PlaySE("Match");
         if (_kyakuGenerator != null)
         {
             _kyakuGenerator.NewGenerate(targetPos);

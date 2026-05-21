@@ -147,11 +147,11 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 0}
+  m_Resource: {fileID: 8300000, guid: e892e47552881e147a9d4a1117c81e1f, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.555
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -309,6 +309,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _loadScene: 
+  _loadTime: 0.2
+  _button: {fileID: 0}
 --- !u!4 &437245949
 Transform:
   m_ObjectHideFlags: 0
@@ -474,8 +476,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb53b462cce841544a2d772d1fbac679, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawninterval: 2
-  feverspawninterval: 1
+  spawninterval: 0.75
+  feverspawninterval: 0.5
   isSpawning: 1
   OriginObjects:
   - {fileID: 1341272077576887102, guid: 9406cf44cc383b84491e8de175a0517e, type: 3}
@@ -914,6 +916,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 7659185549862499227}
     - target: {fileID: 539818136050141635, guid: 3d7ca485299ac704d859b79a0c57c6a6, type: 3}
+      propertyPath: timer
+      value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 539818136050141635, guid: 3d7ca485299ac704d859b79a0c57c6a6, type: 3}
       propertyPath: _sceneLoader
       value: 
       objectReference: {fileID: 437245948}
@@ -1033,6 +1039,10 @@ PrefabInstance:
       propertyPath: text
       value: 
       objectReference: {fileID: 1258862776}
+    - target: {fileID: 6646253874090535226, guid: 6b1d2840227cd224faf19e2266683b53, type: 3}
+      propertyPath: _duration
+      value: 0.2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1280,6 +1290,42 @@ PrefabInstance:
       propertyPath: _bgmSource
       value: 
       objectReference: {fileID: 26951320}
+    - target: {fileID: 4195740900717313693, guid: c08776c6127c3014cba4a656c411248f, type: 3}
+      propertyPath: _bgmList.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4195740900717313693, guid: c08776c6127c3014cba4a656c411248f, type: 3}
+      propertyPath: _bgmList.Array.data[0].Clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 78e9ed58401b4b342820d9ba53a73702, type: 3}
+    - target: {fileID: 4195740900717313693, guid: c08776c6127c3014cba4a656c411248f, type: 3}
+      propertyPath: _bgmList.Array.data[0].Name
+      value: Match
+      objectReference: {fileID: 0}
+    - target: {fileID: 4195740900717313693, guid: c08776c6127c3014cba4a656c411248f, type: 3}
+      propertyPath: _bgmList.Array.data[1].Clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 7858c88d51f45454e894e32ee8f2c582, type: 3}
+    - target: {fileID: 4195740900717313693, guid: c08776c6127c3014cba4a656c411248f, type: 3}
+      propertyPath: _bgmList.Array.data[1].Name
+      value: Miss
+      objectReference: {fileID: 0}
+    - target: {fileID: 4195740900717313693, guid: c08776c6127c3014cba4a656c411248f, type: 3}
+      propertyPath: _bgmList.Array.data[2].Clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 0f854d690aed20841b79b1a88a6cb76f, type: 3}
+    - target: {fileID: 4195740900717313693, guid: c08776c6127c3014cba4a656c411248f, type: 3}
+      propertyPath: _bgmList.Array.data[2].Name
+      value: Grab
+      objectReference: {fileID: 0}
+    - target: {fileID: 4195740900717313693, guid: c08776c6127c3014cba4a656c411248f, type: 3}
+      propertyPath: _bgmList.Array.data[3].Clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 0f854d690aed20841b79b1a88a6cb76f, type: 3}
+    - target: {fileID: 4195740900717313693, guid: c08776c6127c3014cba4a656c411248f, type: 3}
+      propertyPath: _bgmList.Array.data[3].Name
+      value: Grab
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
