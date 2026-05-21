@@ -1,9 +1,8 @@
 using System.Collections;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class FadeOut : MonoBehaviour
+public class fadeout2 : MonoBehaviour
 {
     [SerializeField] private Image Image;
     [SerializeField] private float fadeDuration = 1.0f;
@@ -11,36 +10,38 @@ public class FadeOut : MonoBehaviour
 
     private bool isFading = false;
     Color color;
+
     private void Start()
     {
+        color = gameObject.GetComponent<Image>().color;
+        color.r = 0.0f;
+        color.g = 0.0f;
+        color.b = 0.0f;
+        color.a = 0.1f;
+        gameObject.GetComponent<Image>().color = color;
+
         if (Button != null)
         {
             Button.onClick.AddListener(StartFadeOut);
         }
     }
-
     public void StartFadeOut()
     {
         if (isFading) return;
-        Image.gameObject.SetActive(true);
+
         StartCoroutine(FadeOutCoroutine());
     }
-
     private IEnumerator FadeOutCoroutine()
     {
-        isFading = true;
-
-        // 念のため、フェード中の裏のUIクリックを防止
-
-        float elapsedTime = 0f;
-
-        while (elapsedTime < fadeDuration)
+        if (isFading == true)
         {
-            elapsedTime += Time.deltaTime;
-            color.a = Mathf.Clamp01((float)elapsedTime / fadeDuration);
+            color.a += 0.5f;
+            gameObject.GetComponent<Image>().color = color;
             yield return null;
+            if (color.a >= 1)
+            {
+                isFading = false;
+            }
         }
-
-        color.a = 1f;
-    }
+     }
 }
