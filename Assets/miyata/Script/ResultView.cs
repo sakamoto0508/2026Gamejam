@@ -6,6 +6,10 @@ public class ResultView : MonoBehaviour
 {
     [SerializeField]
     List<Text> texts;
+
+    [SerializeField]
+    Text currentScoreText;
+
     void Start()
     {
         var data = RankingManager.RankingData;
@@ -20,6 +24,7 @@ public class ResultView : MonoBehaviour
                 texts[i].text = "    ---";
             }
         }
+        currentScoreText.text = $"Score: {RankingManager.CurrentScore}点";
     }
 
 

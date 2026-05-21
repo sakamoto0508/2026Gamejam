@@ -17,7 +17,7 @@ public class Score : MonoBehaviour
 
     private void Start()
     {
-        text.text = GameScore.ToString();
+        text.text = "Score: " + GameScore.ToString();
         _defaultScale = text.transform.localScale;
     }
 
@@ -30,14 +30,14 @@ public class Score : MonoBehaviour
     public void ScoreUpdate(int amount)
     {
         GameScore += amount;
-        text.text = GameScore.ToString();
+        text.text = "Score: " + GameScore.ToString();
         StopAllCoroutines();
         StartCoroutine(ScoreAnimation());
     }
     public void FeverUPdate()
     {
         GameScore += fever;
-        text.text = GameScore.ToString();
+        text.text = "Score: " + GameScore.ToString();
         StopAllCoroutines();
         StartCoroutine(ScoreAnimation());
     }
