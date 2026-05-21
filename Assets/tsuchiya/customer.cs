@@ -3,8 +3,8 @@ using UnityEngine;
 public class Customer : MonoBehaviour
 {
     [SerializeField]
-    private float speed = 1f;  //‹q‚Ì‘¬‚³
-    [SerializeField] private float _leaveSpeed = 2f;  //‹q‚ª‹‚é‘¬‚³
+    private float speed = 1f;  //ï¿½qï¿½Ì‘ï¿½ï¿½ï¿½
+    [SerializeField] private float _leaveSpeed = 2f;  //ï¿½qï¿½ï¿½ï¿½ï¿½ï¿½é‘¬ï¿½ï¿½
     public int HaveScore { get { return _haveScore; } }
     [SerializeField] private int _haveScore = 10;
     public bool iscorected = false;
@@ -12,7 +12,7 @@ public class Customer : MonoBehaviour
     private Vector2 targetposition;
 
     // Update is called once per frame
-    void Update()//‹q‚Æ•‚ª‚ ‚Á‚½‚©‚Ç‚¤‚©ƒu[ƒ‹’l‚ğŒˆ‚ß‚é@‚ ‚Á‚Ä‚¢‚½‚ç•‚Æ“¯‚¶‚½‚¾¶‚És‚­B
+    void FixedUpdate()//qÆ•Ç‚u[lß‚@Ä‚ç•Æ“ÉsB
     {
         if (!iscorected)
         {
@@ -20,9 +20,9 @@ public class Customer : MonoBehaviour
         }
         else
         {
-            Transform myTransform = this.transform;  //ƒ[ƒ‹ƒhÀ•W‚ğŠî€‚ÉAÀ•W‚ğæ“¾
+            Transform myTransform = this.transform;  //ï¿½ï¿½ï¿½[ï¿½ï¿½ï¿½hï¿½ï¿½ï¿½Wï¿½ï¿½ï¿½î€ï¿½ÉAï¿½ï¿½ï¿½Wï¿½ï¿½ï¿½æ“¾
             Vector2 pos = myTransform.position;
-            pos.x += _leaveSpeed;  //‘¬‚³
+            pos.x += _leaveSpeed;  //ï¿½ï¿½ï¿½ï¿½
             myTransform.position = pos;
         }
     }

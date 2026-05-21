@@ -3,7 +3,7 @@ using UnityEngine;
 public class MainCharacter : MonoBehaviour
 {
     [SerializeField]
-    private float speed = 1f;  //‘¬‚³
+    private float speed = 1f;  //ï¿½ï¿½ï¿½ï¿½
     public bool IsMove = true;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -16,9 +16,9 @@ public class MainCharacter : MonoBehaviour
     {
         if (!IsMove) return;
 
-        Transform myTransform = this.transform;  //ƒ[ƒ‹ƒhÀ•W‚ğŠî€‚ÉAÀ•W‚ğæ“¾
+        Transform myTransform = this.transform;  //[hWî€ÉAWæ“¾
         Vector2 pos = myTransform.position;
-        pos.x += speed;  //‘¬‚³
+        pos.x += speed * Time.deltaTime;  //
 
         myTransform.position = pos;
     }

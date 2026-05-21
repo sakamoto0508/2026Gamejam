@@ -19,11 +19,14 @@ public static class RankingManager
 
     public static List<RankingEntry> RankingData => rankingData;
 
+    public static int CurrentScore { get; set; }
+
     /// <summary>
     /// スコアを登録する（自動でソートして上位5件を保持）
     /// </summary>
     public static void AddScore(int score)
     {
+        CurrentScore = score;
         rankingData.Add(new RankingEntry
         {
             score = score,

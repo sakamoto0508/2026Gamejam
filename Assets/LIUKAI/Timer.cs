@@ -25,7 +25,7 @@ public class Timer : MonoBehaviour
 
     void Start()
     {
-        text.text = "30";
+        text.text = "あと " + timer.ToString("F0") + "秒";
 
         // 最初の色を保存
         defaultColor = text.color;
@@ -38,7 +38,7 @@ public class Timer : MonoBehaviour
     {
         timer -= Time.deltaTime;
 
-        text.text = Mathf.Max(0, timer).ToString("F0");
+        text.text = "あと " + Mathf.Max(0, timer).ToString("F0") + "秒";
 
         if (timer <= 10)
         {
