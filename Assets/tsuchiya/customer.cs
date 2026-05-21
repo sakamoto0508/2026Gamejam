@@ -9,8 +9,8 @@ public class Customer : MonoBehaviour
     public int HaveScore { get { return _haveScore; } }
     [SerializeField] private int _haveScore = 10;
     public bool iscorected = false;
+    public Vector2 Targetposition { get { return targetposition; } }
     private Vector2 targetposition;
-
 
     // Update is called once per frame
     void Update()//客と服があったかどうかブール値を決める　あっていたら服と同じただ左に行く。
