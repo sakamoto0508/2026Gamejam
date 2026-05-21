@@ -1,11 +1,10 @@
 using System.Collections.Generic;
-using System.Threading;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class KyakuGenerator : MonoBehaviour
 {
     public List<GameObject> Customers = new List<GameObject>();
+    public List<Transform> GeneratePoint => _generatePoint;
     [SerializeField] private List<Transform> _generatePoint;
     bool once = false;
     [SerializeField] private GameObject _rikishi;
@@ -23,9 +22,10 @@ public class KyakuGenerator : MonoBehaviour
     {
         int rand = Random.Range(0, Customers.Count);
         GameObject customerObject = Instantiate(Customers[rand], transform.position, transform.rotation);
-        if (customerObject.TryGetComponent<Customer>(out var customer))
+        if (customerObject.TryGetComponent<Customer>(out var customer) && customerObject.TryGetComponent<SizeMatch>(out var sizeMatch))
         {
             customer.Targetvecter(position);
+            sizeMatch.targetPos = position;
         }
     }
 

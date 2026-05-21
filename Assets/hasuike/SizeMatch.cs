@@ -7,6 +7,7 @@ public class SizeMatch : MonoBehaviour
     private Customer _customer;
     private KyakuGenerator _kyakuGenerator;
     private Score _score;
+    public Vector2 targetPos;
 
     private void Start()
     {
@@ -42,7 +43,7 @@ public class SizeMatch : MonoBehaviour
     {
         if (_kyakuGenerator != null)
         {
-            _kyakuGenerator.NewGenerate(this.transform.position);
+            _kyakuGenerator.NewGenerate(targetPos);
         }
         _customer.iscorected = true;
         Debug.Log($"Customer {_customer.name} corrected: {_customer.iscorected}");
