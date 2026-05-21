@@ -47,6 +47,12 @@ MonoBehaviour:
   _bgmList:
   - Name: 
     Clip: {fileID: 0}
-  _seList: []
-  _bgmSource: {fileID: 0}
-  _seSource: {fileID: 0}
+  _seList:
+  - Name: Match
+    Clip: {fileID: 8300000, guid: 78e9ed58401b4b342820d9ba53a73702, type: 3}
+  - Name: Miss
+    Clip: {fileID: 8300000, guid: 7858c88d51f45454e894e32ee8f2c582, type: 3}
+  - Name: Grab
+    Clip: {fileID: 8300000, guid: 0f854d690aed20841b79b1a88a6cb76f, type: 3}
+  _bgmSource: {fileID: 3763468598563767846, guid: 51f7bc757ce3af348a2a9efed8654ae9, type: 3}
+  _seSource: {fileID: 2752136028666238211, guid: 132a19ccf0ad954459448650b39e0d6f, type: 3}
