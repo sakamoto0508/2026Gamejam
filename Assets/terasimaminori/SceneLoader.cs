@@ -14,19 +14,22 @@ public class Scene : MonoBehaviour
     public void SceneChange()
     {
         _loadScene = "Game";
+        if(_button != null)
         _button.interactable = false;
         StartCoroutine(LoadSceneCoroutine(_loadScene));
     }
     public void TitleChange()
     {
         _loadScene = "Title";
-        _button.interactable = false;
+        if(_button != null)
+            _button.interactable = false;
         StartCoroutine(LoadSceneCoroutine(_loadScene));
     }
     public void ResultChange()
     {
         _loadScene = "Result";
-        _button.interactable = false;
+        if(_button != null)
+            _button.interactable = false;
         StartCoroutine(LoadSceneCoroutine(_loadScene));
     }
 
