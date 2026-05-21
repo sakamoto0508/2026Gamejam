@@ -1,36 +1,65 @@
-using NUnit.Framework.Internal.Execution;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class Timer : MonoBehaviour
 {
-    [SerializeField] Text text;
+    [SerializeField] private Text text;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    [SerializeField]float timer = 30f;
-    [SerializeField]Scene _sceneLoader;
-    bool gameOver;
+    [SerializeField] private float timer = 30f;
+
+    // 点滅を始める秒数
+    [SerializeField] private float warningTime = 5f;
+
+    // 点滅速度
+    [SerializeField] private float blinkSpeed = 5f;
+
+    [SerializeField] private Scene _sceneLoader;
+
+    private bool gameOver;
+
     public bool IsFever = false;
+
+    private Color defaultColor;
+
     void Start()
     {
         text.text = "30";
+
+        // 最初の色を保存
+        defaultColor = text.color;
     }
-    // Update is called once per frame
+
     void Update()
     {
         timer -= Time.deltaTime;
+
         text.text = Mathf.Max(0, timer).ToString("F0");
+
         if (timer <= 10)
         {
             IsFever = true;
         }
-        if (timer <=0f&&gameOver==false)
+
+        // 残り warningTime 秒以下なら点滅
+        if (timer <= warningTime)
+        {
+            float t = Mathf.PingPong(Time.time * blinkSpeed, 1f);
+
+            // 白 ⇔ 赤 を往復
+            text.color = Color.Lerp(defaultColor, Color.red, t);
+        }
+        else
+        {
+            text.color = defaultColor;
+        }
+
+        if (timer <= 0f && gameOver == false)
         {
             GameOver();
             gameOver = true;
         }
-        
     }
+
     void GameOver()
     {
         _sceneLoader.ResultChange();
