@@ -18,9 +18,9 @@ public class Scene : MonoBehaviour
         _loadScene = "Title";
         SceneManager.LoadScene(_loadScene);
     }
-    public void ReslutChange()
+    public void ResultChange()
     {
-        _loadScene = "Reslut";
+        _loadScene = "Result";
         SceneManager.LoadScene(_loadScene);
     }
 }
