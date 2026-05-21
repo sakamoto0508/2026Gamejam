@@ -27,7 +27,7 @@ public class SizeMatch : MonoBehaviour
                 if (hander.IsPointerUp == true && !isMatched)
                 {
                     Destroy(collision.gameObject);
-                    if (ClothesSize.CurrentSize == component.CurrentSize　&& !_customer.iscorected)
+                    if (ClothesSize.CurrentSize == component.CurrentSize)
                     {
                         isMatched = true;
                         Match();
