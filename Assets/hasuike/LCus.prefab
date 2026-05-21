@@ -180,6 +180,7 @@ MonoBehaviour:
   _leaveSpeed: -0.1
   _haveScore: 10
   iscorected: 0
+  _leaveDelay: 5
 --- !u!114 &3758107256852291507
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -194,6 +195,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetPos: {x: 0, y: 0}
   EffectPrefab: {fileID: 0}
+  _leaveDelay: 5
 --- !u!114 &2786557593195865070
 MonoBehaviour:
   m_ObjectHideFlags: 0

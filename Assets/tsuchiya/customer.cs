@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 
@@ -11,6 +12,8 @@ public class Customer : MonoBehaviour
     public bool iscorected = false;
     public Vector2 Targetposition { get { return targetposition; } }
     private Vector2 targetposition;
+
+    [SerializeField] private float _leaveDelay = 5f; //�q����
 
     // Update is called once per frame
     void FixedUpdate()//qƕǂu[l߂@Ă畞ƓɍsB
@@ -31,4 +34,6 @@ public class Customer : MonoBehaviour
     {
         targetposition = pos;
     }
+
+   
 }

@@ -42,7 +42,7 @@ public class KyakuGenerator : MonoBehaviour
             Customer[] customers = FindObjectsOfType<Customer>();
             foreach (Customer customer in customers)
             {
-                customer.iscorected = true;
+                customer.iscorected = true;   
             }
             for (int i = 0; i < 3; i++)
             {

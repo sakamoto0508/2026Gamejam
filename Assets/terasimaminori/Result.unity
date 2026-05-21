@@ -1356,7 +1356,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3763468598563767846, guid: 51f7bc757ce3af348a2a9efed8654ae9, type: 3}
       propertyPath: m_Volume
-      value: 0.6
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 3763468598563767846, guid: 51f7bc757ce3af348a2a9efed8654ae9, type: 3}
       propertyPath: m_Resource

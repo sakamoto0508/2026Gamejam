@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class SizeMatch : MonoBehaviour
@@ -10,8 +11,10 @@ public class SizeMatch : MonoBehaviour
     public Vector2 targetPos;
 
     public GameObject EffectPrefab;
+    [SerializeField] private float _leaveDelay = 5f; //退出までの遅延時間
     private void Start()
     {
+        StartCoroutine(LeaveAfterDelay(_leaveDelay));  //指定された秒数後にLeaveAfterDelayコルーチンを開始
         ClothesSize = GetComponent<ClothesSize>();
         _customer = GetComponent<Customer>();
         _kyakuGenerator = FindObjectOfType<KyakuGenerator>();
@@ -49,7 +52,7 @@ public class SizeMatch : MonoBehaviour
     private void Match()
     {
         AudioManager.Instance.PlaySE("Match");
-        if (_kyakuGenerator != null)
+        if (_kyakuGenerator != null && _customer.iscorected == false)
         {
             _kyakuGenerator.NewGenerate(targetPos);
         }
@@ -68,5 +71,14 @@ public class SizeMatch : MonoBehaviour
         {
             Destroy(effect);
         }
+    }
+    IEnumerator LeaveAfterDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        if (_kyakuGenerator != null && _customer.iscorected == false)
+        {
+            _kyakuGenerator.NewGenerate(targetPos);
+        }
+        _customer.iscorected = true;
     }
 }
