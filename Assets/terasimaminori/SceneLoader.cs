@@ -6,21 +6,28 @@ using UnityEngine.SceneManagement;
 public class Scene : MonoBehaviour
 {
 
-    [SerializeField] private string _loadScene; 
+    [SerializeField] private string _loadScene;
+    [SerializeField] private float _loadTime = 0.2f;
 
     public void SceneChange()
     {
         _loadScene = "Game";
-        SceneManager.LoadScene(_loadScene);
+        StartCoroutine(LoadSceneCoroutine(_loadScene));
     }
     public void TitleChange()
     {
         _loadScene = "Title";
-        SceneManager.LoadScene(_loadScene);
+        StartCoroutine(LoadSceneCoroutine(_loadScene));
     }
-    public void ReslutChange()
+    public void ResultChange()
     {
-        _loadScene = "Reslut";
-        SceneManager.LoadScene(_loadScene);
+        _loadScene = "Result";
+        StartCoroutine(LoadSceneCoroutine(_loadScene));
+    }
+
+    IEnumerator LoadSceneCoroutine(string sceneName)
+    {
+        yield return new WaitForSeconds(_loadTime);
+        SceneManager.LoadScene(sceneName);
     }
 }
