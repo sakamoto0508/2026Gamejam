@@ -8,7 +8,7 @@ public class ResultView : MonoBehaviour
     List<Text> texts;
     void Start()
     {
-        var data = EditorRankingManager.instance.RankingData;
+        var data = RankingManager.RankingData;
         for (int i = 0; i < texts.Count; i++)
         {
             if (i < data.Count)

@@ -69,7 +69,7 @@ public class Timer : MonoBehaviour
     {
         if (_score != null)
         {
-            EditorRankingManager.instance.AddScore(_score.GameScore);
+            RankingManager.AddScore(_score.GameScore);
         }
 
         _sceneLoader.ResultChange();

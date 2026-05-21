@@ -150,7 +150,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _loadScene: 
   _loadTime: 0.5
-  _button: {fileID: 0}
+  _button: {fileID: 1338049084}
 --- !u!4 &15642531
 Transform:
   m_ObjectHideFlags: 0
@@ -385,11 +385,15 @@ PrefabInstance:
     - target: {fileID: 4195740900717313693, guid: c08776c6127c3014cba4a656c411248f, type: 3}
       propertyPath: _seList.Array.data[0].Clip
       value: 
-      objectReference: {fileID: 8300000, guid: e78640e1dd326cf49bbf001b209185ec, type: 3}
+      objectReference: {fileID: 8300000, guid: 0571bcab5b5800d4b8898e3651d5d868, type: 3}
     - target: {fileID: 4195740900717313693, guid: c08776c6127c3014cba4a656c411248f, type: 3}
       propertyPath: _seList.Array.data[0].Name
       value: click
       objectReference: {fileID: 0}
+    - target: {fileID: 4195740900717313693, guid: c08776c6127c3014cba4a656c411248f, type: 3}
+      propertyPath: _bgmList.Array.data[0].Clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 1c50f703995b9f64e8d0968828516062, type: 3}
     - target: {fileID: 4195740900717313693, guid: c08776c6127c3014cba4a656c411248f, type: 3}
       propertyPath: _bgmList.Array.data[0].Name
       value: result
@@ -676,7 +680,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 5760202260919997367, guid: 69000575bcea51745a46f11ab2e3fb3e, type: 3}
+  m_Sprite: {fileID: 5760202260919997367, guid: 1eda57689311c324d9dc93c7b88a45dc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1066,7 +1070,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 649223268058989734, guid: 335c8815288415042b6868580eccdf09, type: 3}
+  m_Sprite: {fileID: 649223268058989734, guid: 81fb3e6518162a94ab2f11cfb5d15872, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1277,7 +1281,7 @@ PrefabInstance:
     - target: {fileID: 3763468598563767846, guid: 51f7bc757ce3af348a2a9efed8654ae9, type: 3}
       propertyPath: m_Resource
       value: 
-      objectReference: {fileID: 8300000, guid: b9d9300f7a4dd424c821115e43e52b37, type: 3}
+      objectReference: {fileID: 8300000, guid: 1c50f703995b9f64e8d0968828516062, type: 3}
     - target: {fileID: 8152905403247034350, guid: 51f7bc757ce3af348a2a9efed8654ae9, type: 3}
       propertyPath: m_Name
       value: AudioSorce_BGM
