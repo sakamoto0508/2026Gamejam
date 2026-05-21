@@ -175,6 +175,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41936790ab232c649afa962070bc47c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetPos: {x: 0, y: 0}
+  EffectPrefab: {fileID: 0}
 --- !u!114 &2662159802133549558
 MonoBehaviour:
   m_ObjectHideFlags: 0
